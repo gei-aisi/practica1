@@ -1,18 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 require_relative 'provisioning/vbox.rb'
-VBoxUtils.check_version('7.0.6')
-Vagrant.require_version ">= 2.3.4"
-
-class VagrantPlugins::ProviderVirtualBox::Action::Network
-  def dhcp_server_matches_config?(dhcp_server, config)
-    true
-  end
-end
+VBoxUtils.check_version('7.0.14')
+Vagrant.require_version ">= 2.4.0"
 
 Vagrant.configure("2") do |config|
-    config.vm.box = XXX
-    config.vm.hostname = "XXX-aisi2223-docker"
+    config.vm.box = "XXX"
+    config.vm.hostname = "xxx2324-docker"
     config.vm.network "XXX", guest: XXX, host: XXX
 
     # Configure hostmanager and vbguest plugins
