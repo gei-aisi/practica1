@@ -4,7 +4,7 @@ source "vagrant" "aisi" {
   box_version  = "XXX"
   provider     = "XXX"
   add_force    = true
-  skip_add     = true
+  skip_add     = false
   template     = "provisioning/Vagrantfile.template"
 }
 
