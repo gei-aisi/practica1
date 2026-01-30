@@ -17,3 +17,8 @@ sudo apt-get install -y lynx gnupg lsb-release
 # Paso 5: añadir el usuario actual (vagrant) al
 # grupo docker
 
+
+# Paso 6: desactivamos IPv6 para evitar problemas con Docker Swarm
+echo "net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1" | sudo tee /etc/sysctl.d/99-disable-ipv6.conf
